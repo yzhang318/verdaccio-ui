@@ -1,33 +1,24 @@
 import createMuiTheme from '@material-ui/core/styles/createMuiTheme';
 
-// Main colors
-// -------------------------
-const colors = {
-  black: '#000',
-  white: '#fff',
-  red: '#d32f2f',
-  orange: '#CD4000',
-  greySuperLight: '#f5f5f5',
-  greyLight: '#d3d3d3',
-  greyLight2: '#908ba1',
-  greyLight3: '#f3f4f240',
-  greyDark: '#a9a9a9',
-  greyDark2: '#586069',
-  greyChateau: '#95989a',
-  greyGainsboro: '#e3e3e3',
-  greyAthens: '#d3dddd',
-  eclipse: '#3c3c3c',
-  paleNavy: '#e4e8f1',
-  saltpan: '#f7f8f6',
-  snow: '#f9f9f9',
-  love: '#e25555',
-  nobel01: '#999999',
-  nobel02: '#9f9f9f',
-  primary: window.VERDACCIO_PRIMARY_COLOR || '#4b5e40',
-  secondary: '#20232a',
-};
+import defaultTheme from './themes/default';
+import darkTheme from './themes/dark';
+import { ColorsTheme } from './types';
 
-export type Colors = keyof typeof colors;
+function getThemeColors() {
+  // eslint-disable-next-line no-constant-condition
+  if (false) {
+    return defaultTheme;
+  } else {
+    return darkTheme;
+  }
+}
+
+export type Colors = ColorsTheme;
+
+const padding = {
+  light: '16px',
+  regular: '24px',
+};
 
 const fontSize = {
   xxl: 26,
@@ -72,10 +63,10 @@ export const theme = createMuiTheme({
     fontFamily: 'inherit',
   },
   palette: {
-    ...colors,
-    primary: { main: colors.primary },
-    secondary: { main: colors.secondary },
-    error: { main: colors.red },
+    ...getThemeColors(),
+    primary: { main: getThemeColors().primary },
+    secondary: { main: getThemeColors().secondary },
+    error: { main: getThemeColors().red },
   },
   ...customizedTheme,
 });

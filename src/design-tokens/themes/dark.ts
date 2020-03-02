@@ -1,0 +1,30 @@
+const colors = {
+  black: '#000',
+  white: '#fff',
+  red: '#d32f2f',
+  orange: '#CD4000',
+  greySuperLight: '#f5f5f5',
+  greyLight: '#d3d3d3',
+  greyLight2: '#908ba1',
+  greyLight3: '#f3f4f240',
+  greyDark: '#a9a9a9',
+  greyDark2: '#fff',
+  greyChateau: '#95989a',
+  greyGainsboro: '#e3e3e3',
+  greyAthens: '#d3dddd',
+  eclipse: '#fff',
+  paleNavy: '#e4e8f1',
+  saltpan: '#f7f8f6',
+  snow: '#f9f9f9',
+  love: '#e25555',
+  nobel01: '#999999',
+  nobel02: '#9f9f9f',
+  primary: '#000000',
+  secondary: '#ffffff',
+  // colors based on features
+  backgroundBody: '#000',
+  lightBackgroundColor: '#fff',
+  readmeBackgroundColor: '#fff',
+};
+
+export default colors;

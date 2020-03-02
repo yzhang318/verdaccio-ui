@@ -2,6 +2,8 @@ import isURLValidator from 'validator/lib/isURL';
 import isEmailValidator from 'validator/lib/isEmail';
 import '../../types';
 
+const OCTET_STREAM_TYPE = 'application/octet-stream';
+
 export function isURL(url: string): boolean {
   return isURLValidator(url || '', {
     protocols: ['http', 'https', 'git+https'],
@@ -37,9 +39,9 @@ export function downloadFile(fileStream: Blob, fileName: string): void {
   // @ts-ignore. Please see: https://github.com/microsoft/TypeScript/issues/33792
   if (navigator.msSaveBlob) {
     // Detect if Edge
-    file = blobToFile(new Blob([fileStream], { type: 'application/octet-stream' }), fileName);
+    file = blobToFile(new Blob([fileStream], { type: OCTET_STREAM_TYPE }), fileName);
   } else {
-    file = new File([fileStream], fileName, { type: 'application/octet-stream', lastModified: Date.now() });
+    file = new File([fileStream], fileName, { type: OCTET_STREAM_TYPE, lastModified: Date.now() });
   }
 
   const objectURL = URL.createObjectURL(file);

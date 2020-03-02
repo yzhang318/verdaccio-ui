@@ -28,9 +28,9 @@ const DetailContainerTabs: React.FC<Props> = ({ tabPosition, onChangeTabPosition
 
   return (
     <Tabs
-      indicatorColor={'primary'}
+      indicatorColor={'secondary'}
       onChange={onChangeTabPosition}
-      textColor={'primary'}
+      textColor={'secondary'}
       value={tabPositionIndex}
       variant={'fullWidth'}>
       <Tab data-testid={'readme-tab'} id={'readme-tab'} label={TabPosition.README} />

@@ -71,7 +71,7 @@ export const PackageTitle = styled('span')<{ theme?: Theme }>(({ theme }) => ({
   fontSize: 20,
   display: 'block',
   marginBottom: 12,
-  color: theme && theme.palette.eclipse,
+  color: theme?.palette?.eclipse,
   cursor: 'pointer',
   ':hover': {
     color: theme && theme.palette.black,
@@ -117,7 +117,7 @@ export const PackageListItemText = styled(ListItemText)({
 });
 
 export const Description = styled(Typography)<{ theme?: Theme }>(props => ({
-  color: props.theme && props.theme.palette.greyDark2,
+  color: props?.theme?.palette.greyDark2,
   fontSize: '14px',
   paddingRight: 0,
 }));

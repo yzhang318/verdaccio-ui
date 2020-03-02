@@ -6,6 +6,7 @@ import Box from '../../muiComponents/Box';
 import DetailContainerTabs from './DetailContainerTabs';
 import DetailContainerContent from './DetailContainerContent';
 import { TabPosition } from './tabs';
+import { DetailTheme } from './styles';
 
 const DetailContainer: React.FC = () => {
   const [tabPosition, setTabPosition] = useState(TabPosition.README);
@@ -23,10 +24,12 @@ const DetailContainer: React.FC = () => {
   );
 
   return (
-    <Box component="div" display="flex" flexDirection="column" padding={2}>
-      <DetailContainerTabs onChangeTabPosition={handleChangeTabPosition} tabPosition={tabPosition} />
-      <DetailContainerContent readDescription={readMe} tabPosition={tabPosition} />
-    </Box>
+      <Box component="div" display="flex" flexDirection="column">
+        <DetailContainerTabs onChangeTabPosition={handleChangeTabPosition} tabPosition={tabPosition} />
+        <DetailTheme>
+          <DetailContainerContent readDescription={readMe} tabPosition={tabPosition} />
+        </DetailTheme>
+      </Box>
   );
 };
 

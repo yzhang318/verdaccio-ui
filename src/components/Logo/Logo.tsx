@@ -1,9 +1,10 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-import logo from './img/logo.svg';
+import logo from './img/verdaccio-blackwhite.svg';
 
 export enum Size {
+  Tiny = '20px',
   Small = '40px',
   Big = '90px',
 }

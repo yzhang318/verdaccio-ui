@@ -15,7 +15,7 @@ import AppContextProvider from './AppContextProvider';
 import AppRoute, { history } from './AppRoute';
 
 const StyledBox = styled(Box)<{ theme?: Theme }>(({ theme }) => ({
-  backgroundColor: theme && theme.palette.white,
+  backgroundColor: theme && theme.palette.backgroundBody,
 }));
 
 const StyledBoxContent = styled(Box)<{ theme?: Theme }>(({ theme }) => ({
