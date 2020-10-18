@@ -9,12 +9,16 @@ import getRouterPackageName from './get-route-package-name';
 import isPackageVersionValid from './is-package-version-valid';
 
 interface Params {
-  scope?: string;
   package: string;
+  scope?: string;
   version?: string;
 }
 
-const VersionContextProvider: React.FC = ({ children }) => {
+interface Props {
+  children: React.ReactNode;
+}
+
+const VersionContextProvider = ({ children }: Props) => {
   const { version, package: pkgName, scope } = useParams<Params>();
   const [packageName, setPackageName] = useState(getRouterPackageName(pkgName, scope));
   const [packageVersion, setPackageVersion] = useState(version);

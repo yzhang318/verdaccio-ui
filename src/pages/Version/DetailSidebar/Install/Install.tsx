@@ -10,12 +10,7 @@ import { DetailContext } from '../..';
 
 import InstallListItem, { DependencyManager } from './InstallListItem';
 
-const StyledText = styled(Text)<{ theme?: Theme }>(props => ({
-  fontWeight: props.theme && props.theme.fontWeight.bold,
-  textTransform: 'capitalize',
-}));
-
-const Install: React.FC = () => {
+const Install = () => {
   const { t } = useTranslation();
   const detailContext = useContext(DetailContext);
 
@@ -37,3 +32,8 @@ const Install: React.FC = () => {
 };
 
 export default Install;
+
+const StyledText = styled(Text)<{ theme?: Theme }>(props => ({
+  fontWeight: props.theme && props.theme.fontWeight.bold,
+  textTransform: 'capitalize',
+}));

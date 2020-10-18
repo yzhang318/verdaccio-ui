@@ -6,6 +6,6 @@ interface Props {
   children: ReactNode;
 }
 
-const Tag: React.FC<Props> = ({ children }) => <Wrapper>{children}</Wrapper>;
+const Tag = ({ children }: Props) => <Wrapper>{children}</Wrapper>;
 
 export default Tag;

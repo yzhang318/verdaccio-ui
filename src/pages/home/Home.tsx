@@ -9,7 +9,7 @@ interface Props {
   isUserLoggedIn: boolean;
 }
 
-const Home: React.FC<Props> = ({ isUserLoggedIn }) => {
+const Home = ({ isUserLoggedIn }: Props) => {
   const [packages, setPackages] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const loadPackages = async () => {

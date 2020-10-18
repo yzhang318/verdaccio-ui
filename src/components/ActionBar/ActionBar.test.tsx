@@ -4,7 +4,7 @@ import { render, cleanup } from 'verdaccio-ui/utils/test-react-testing-library';
 
 import { DetailContext, DetailContextProps } from '../../pages/Version';
 
-import ActionBar from './ActionBar';
+import ActionBar from '.';
 
 const detailContextValue: DetailContextProps = {
   packageName: 'foo',
@@ -26,7 +26,7 @@ const detailContextValue: DetailContextProps = {
   },
 };
 
-const ComponentToBeRendered: React.FC<{ contextValue: DetailContextProps }> = ({ contextValue }) => (
+const ComponentToBeRendered = ({ contextValue }: { contextValue: DetailContextProps }) => (
   <DetailContext.Provider value={contextValue}>
     <ActionBar />
   </DetailContext.Provider>

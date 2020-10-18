@@ -11,7 +11,7 @@ interface Props {
   tabPosition: number;
 }
 
-const DetailContainerTabs: React.FC<Props> = ({ tabPosition, onChange }) => {
+const DetailContainerTabs = ({ tabPosition, onChange }: Props) => {
   const { t } = useTranslation();
 
   return (

@@ -16,7 +16,7 @@ import Engines from './Engines';
 import Install from './Install';
 import Repository from './Repository';
 
-const DetailSidebar: React.FC = () => {
+const DetailSidebar = () => {
   const detailContext = useContext(DetailContext);
 
   const { packageMeta, packageName, packageVersion } = detailContext;

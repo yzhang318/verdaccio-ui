@@ -6,7 +6,7 @@ import NotFound from 'verdaccio-ui/components/NotFound';
 import { DetailContext } from './context';
 import VersionLayout from './VersionLayout';
 
-const Version: React.FC = () => {
+const Version = () => {
   const detailContext = useContext(DetailContext);
   const { isLoading, hasNotBeenFound } = detailContext;
 

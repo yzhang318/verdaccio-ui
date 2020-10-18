@@ -13,25 +13,15 @@ import Tooltip from '../Tooltip';
 
 import downloadTarball from './download-tarball';
 
-export const Fab = styled(FloatingActionButton)<{ theme?: Theme }>(({ theme }) => ({
-  backgroundColor: theme?.palette.type === 'light' ? theme?.palette.primary.main : theme?.palette.cyanBlue,
-  color: theme?.palette.white,
-  marginRight: 10,
-  ':hover': {
-    color: theme?.palette.type === 'light' ? theme?.palette.primary.main : theme?.palette.cyanBlue,
-    background: theme?.palette.white,
-  },
-}));
-
 type ActionType = 'VISIT_HOMEPAGE' | 'OPEN_AN_ISSUE' | 'DOWNLOAD_TARBALL';
 
-export interface ActionBarActionProps {
+interface Props {
   type: ActionType;
   link: string;
 }
 
 /* eslint-disable react/jsx-no-bind */
-const ActionBarAction: React.FC<ActionBarActionProps> = ({ type, link }) => {
+const ActionBarAction = ({ type, link }: Props) => {
   const { t } = useTranslation();
   switch (type) {
     case 'VISIT_HOMEPAGE':
@@ -66,3 +56,13 @@ const ActionBarAction: React.FC<ActionBarActionProps> = ({ type, link }) => {
 };
 
 export default ActionBarAction;
+
+const Fab = styled(FloatingActionButton)<{ theme?: Theme }>(({ theme }) => ({
+  backgroundColor: theme?.palette.type === 'light' ? theme?.palette.primary.main : theme?.palette.cyanBlue,
+  color: theme?.palette.white,
+  marginRight: 10,
+  ':hover': {
+    color: theme?.palette.type === 'light' ? theme?.palette.primary.main : theme?.palette.cyanBlue,
+    background: theme?.palette.white,
+  },
+}));

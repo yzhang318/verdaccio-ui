@@ -18,16 +18,8 @@ import { useTranslation } from 'react-i18next';
 import { Theme } from 'verdaccio-ui/design-tokens/theme';
 
 import MenuItem from '../MenuItem';
-
-import { Wrapper, InputField, SuggestionContainer } from './styles';
-
-const StyledAnchor = styled('a')<{ highlight: boolean; theme?: Theme }>(props => ({
-  fontWeight: props.theme && props.highlight ? props.theme.fontWeight.semiBold : props.theme.fontWeight.light,
-}));
-
-const StyledMenuItem = styled(MenuItem)({
-  cursor: 'pointer',
-});
+import Paper from '../Paper';
+import TextField from '../TextField';
 
 interface Props {
   suggestions: Suggestion[];
@@ -166,3 +158,56 @@ const AutoComplete = memo(
 );
 
 export default AutoComplete;
+
+const Wrapper = styled('div')({
+  width: '100%',
+  height: '32px',
+  position: 'relative',
+  zIndex: 1,
+});
+
+const StyledAnchor = styled('a')<{ highlight: boolean; theme?: Theme }>(props => ({
+  fontWeight: props.theme && props.highlight ? props.theme.fontWeight.semiBold : props.theme.fontWeight.light,
+}));
+
+const StyledMenuItem = styled(MenuItem)({
+  cursor: 'pointer',
+});
+
+const StyledTextField = styled(TextField)<{ theme?: Theme }>(props => ({
+  '& .MuiInputBase-root': {
+    ':before': {
+      content: "''",
+      border: 'none',
+    },
+    ':after': {
+      borderColor: props.theme && props.theme.palette.white,
+    },
+    ':hover:before': {
+      content: 'none',
+    },
+    ':hover:after': {
+      content: 'none',
+      transform: 'scaleX(1)',
+    },
+    [`@media screen and (min-width: ${props.theme?.breakPoints.medium}px)`]: {
+      ':hover:after': {
+        content: "''",
+      },
+    },
+  },
+  '& .MuiInputBase-input': {
+    [`@media screen and (min-width: ${props.theme?.breakPoints.medium}px)`]: {
+      color: props.theme && props.theme.palette.white,
+    },
+  },
+}));
+
+/* eslint-disable verdaccio/jsx-spread */
+// @ts-ignore types of color are incompatible
+const InputField = ({ ...others }: InputFieldProps & TextFieldProps) => <StyledTextField {...others} />;
+
+const SuggestionContainer = styled(Paper)({
+  maxHeight: '500px',
+  overflowY: 'auto',
+});

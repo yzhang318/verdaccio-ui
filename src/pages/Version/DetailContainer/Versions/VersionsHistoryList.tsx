@@ -15,7 +15,7 @@ interface Props {
   time: Time;
 }
 
-const VersionsHistoryList: React.FC<Props> = ({ versions, packageName, time }) => {
+const VersionsHistoryList = ({ versions, packageName, time }: Props) => {
   const { t } = useTranslation();
 
   return (
