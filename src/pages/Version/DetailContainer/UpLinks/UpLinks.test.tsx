@@ -4,7 +4,7 @@ import { render, cleanup } from 'verdaccio-ui/utils/test-react-testing-library';
 
 import { DetailContext } from '../../context';
 
-import UpLinks from './UpLinks';
+import UpLinks from '.';
 
 describe('<UpLinks /> component', () => {
   beforeEach(cleanup);

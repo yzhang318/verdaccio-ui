@@ -2,7 +2,7 @@ import React from 'react';
 
 import { render } from 'verdaccio-ui/utils/test-react-testing-library';
 
-import NoItems from './NoItems';
+import NoItems from '.';
 
 describe('<NoItem /> component', () => {
   const props = {

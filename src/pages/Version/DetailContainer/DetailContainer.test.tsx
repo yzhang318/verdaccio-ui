@@ -2,7 +2,7 @@ import React from 'react';
 
 import { render } from 'verdaccio-ui/utils/test-react-testing-library';
 
-import DetailContainer from './DetailContainer';
+import DetailContainer from '.';
 
 describe('DetailContainer', () => {
   test('renders correctly', () => {

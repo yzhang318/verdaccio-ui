@@ -2,7 +2,7 @@ import React from 'react';
 
 import { render } from 'verdaccio-ui/utils/test-react-testing-library';
 
-import Label from './Label';
+import Label from '.';
 
 describe('<Label /> component', () => {
   const props = {

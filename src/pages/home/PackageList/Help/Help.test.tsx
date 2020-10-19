@@ -2,7 +2,7 @@ import React from 'react';
 
 import { render } from 'verdaccio-ui/utils/test-react-testing-library';
 
-import Help from './Help';
+import Help from '.';
 
 describe('<Help /> component', () => {
   test('should load the component in default state', () => {

@@ -5,7 +5,7 @@ import { render } from 'verdaccio-ui/utils/test-react-testing-library';
 
 import { DetailContextProvider } from '../../context';
 
-import Dependencies from './Dependencies';
+import Dependencies from '.';
 
 describe('<Dependencies /> component', () => {
   test('Renders a message when there are no dependencies', () => {

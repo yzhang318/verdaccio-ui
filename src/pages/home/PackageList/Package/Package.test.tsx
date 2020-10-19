@@ -3,7 +3,7 @@ import { MemoryRouter } from 'react-router';
 
 import { render, cleanup } from 'verdaccio-ui/utils/test-react-testing-library';
 
-import Package from './Package';
+import Package from '.';
 
 /**
  * Generates one month back date from current time

@@ -2,7 +2,7 @@ import React from 'react';
 
 import { render } from 'verdaccio-ui/utils/test-react-testing-library';
 
-import Loading from './Loading';
+import Loading from '.';
 
 describe('<Loading /> component', () => {
   test('should render the component in default state', () => {

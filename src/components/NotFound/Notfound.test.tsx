@@ -3,7 +3,7 @@ import { MemoryRouter } from 'react-router';
 
 import { render, fireEvent } from 'verdaccio-ui/utils/test-react-testing-library';
 
-import NotFound from './NotFound';
+import NotFound from '.';
 
 const mockHistory = jest.fn();
 

@@ -2,7 +2,7 @@ import React from 'react';
 
 import { render } from 'verdaccio-ui/utils/test-react-testing-library';
 
-import Logo from './Logo';
+import Logo from '.';
 
 describe('<Logo /> component', () => {
   test('should render the component in default state', () => {

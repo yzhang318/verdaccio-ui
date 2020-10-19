@@ -4,7 +4,7 @@ import { render, cleanup } from 'verdaccio-ui/utils/test-react-testing-library';
 
 import { DetailContext } from '../../context';
 
-import Dist from './Dist';
+import Dist from '.';
 
 const withDistComponent = (packageMeta: React.ContextType<typeof DetailContext>['packageMeta']): JSX.Element => (
   <DetailContext.Provider value={{ packageMeta }}>

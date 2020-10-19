@@ -3,7 +3,7 @@ import { BrowserRouter } from 'react-router-dom';
 
 import { render, cleanup } from 'verdaccio-ui/utils/test-react-testing-library';
 
-import { PackageList } from './PackageList';
+import { PackageList } from '.';
 
 describe('<PackageList /> component', () => {
   beforeEach(cleanup);

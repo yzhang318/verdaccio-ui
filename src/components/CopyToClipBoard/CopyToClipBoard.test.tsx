@@ -3,7 +3,7 @@ import React from 'react';
 import { copyToClipBoardUtility } from 'verdaccio-ui/utils/cli-utils';
 import { render, cleanup, fireEvent } from 'verdaccio-ui/utils/test-react-testing-library';
 
-import CopyToClipBoard from './CopyToClipBoard';
+import CopyToClipBoard from '.';
 
 jest.mock('verdaccio-ui/utils/cli-utils');
 

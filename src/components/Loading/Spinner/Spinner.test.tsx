@@ -2,7 +2,7 @@ import React from 'react';
 
 import { render, cleanup } from 'verdaccio-ui/utils/test-react-testing-library';
 
-import Spinner from './Spinner';
+import Spinner from '.';
 
 describe('<Spinner /> component', () => {
   beforeEach(cleanup);

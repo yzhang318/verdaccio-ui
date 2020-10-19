@@ -5,7 +5,7 @@ import { render, cleanup } from 'verdaccio-ui/utils/test-react-testing-library';
 import { PackageMetaInterface } from '../../../../../types/packageMeta';
 import { DetailContext } from '../../context';
 
-import Engine from './Engines';
+import Engine from '.';
 
 jest.mock('./img/node.png', () => '');
 jest.mock('../Install/img/npm.svg', () => '');
