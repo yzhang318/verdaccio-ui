@@ -16,39 +16,7 @@ import { DetailContext } from '../../context';
 
 import git from './img/git.png';
 
-const StyledText = styled(Text)<{ theme?: Theme }>(props => ({
-  fontWeight: props.theme && props.theme.fontWeight.bold,
-  textTransform: 'capitalize',
-}));
-
-const GithubLink = styled(Link)<{ theme?: Theme }>(({ theme }) => ({
-  color: theme?.palette.type === 'light' ? theme?.palette.primary.main : theme?.palette.white,
-  ':hover': {
-    color: theme?.palette.dodgerBlue,
-  },
-}));
-
-const RepositoryListItem = styled(ListItem)({
-  padding: 0,
-  ':hover': {
-    backgroundColor: 'transparent',
-  },
-});
-
-const RepositoryListItemText = styled(ListItemText)({
-  padding: '0 10px',
-  margin: 0,
-});
-
-const RepositoryAvatar = styled(Avatar)({
-  borderRadius: '0px',
-  padding: '0',
-  img: {
-    backgroundColor: 'transparent',
-  },
-});
-
-const Repository: React.FC = () => {
+const Repository = () => {
   const detailContext = React.useContext(DetailContext);
   const { t } = useTranslation();
 
@@ -89,3 +57,35 @@ const Repository: React.FC = () => {
 };
 
 export default Repository;
+
+const StyledText = styled(Text)<{ theme?: Theme }>(props => ({
+  fontWeight: props.theme && props.theme.fontWeight.bold,
+  textTransform: 'capitalize',
+}));
+
+const GithubLink = styled(Link)<{ theme?: Theme }>(({ theme }) => ({
+  color: theme?.palette.type === 'light' ? theme?.palette.primary.main : theme?.palette.white,
+  ':hover': {
+    color: theme?.palette.dodgerBlue,
+  },
+}));
+
+const RepositoryListItem = styled(ListItem)({
+  padding: 0,
+  ':hover': {
+    backgroundColor: 'transparent',
+  },
+});
+
+const RepositoryListItemText = styled(ListItemText)({
+  padding: '0 10px',
+  margin: 0,
+});
+
+const RepositoryAvatar = styled(Avatar)({
+  borderRadius: '0px',
+  padding: '0',
+  img: {
+    backgroundColor: 'transparent',
+  },
+});

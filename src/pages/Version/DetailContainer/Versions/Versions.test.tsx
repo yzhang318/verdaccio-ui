@@ -8,14 +8,19 @@ import { DetailContext } from '../../context';
 import { DetailContextProps } from '../../version-config';
 
 import data from './__partials__/data.json';
-import Versions from './Versions';
+
+import Versions from '.';
+
+interface Props {
+  contextValue: Partial<DetailContextProps>;
+}
 
 const detailContextValue: Partial<DetailContextProps> = {
   packageName: 'foo',
   packageMeta: data,
 };
 
-const ComponentToBeRendered: React.FC<{ contextValue: Partial<DetailContextProps> }> = ({ contextValue }) => (
+const ComponentToBeRendered = ({ contextValue }: Props) => (
   <MemoryRouter>
     <DetailContext.Provider value={contextValue}>
       <Versions />

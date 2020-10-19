@@ -11,7 +11,7 @@ import { isURL } from 'verdaccio-ui/utils/url';
 import { DetailContext } from '..';
 
 /* eslint-disable react/jsx-no-bind */
-const DetailSidebarFundButton: React.FC = () => {
+const DetailSidebarFundButton = () => {
   const detailContext = useContext(DetailContext);
 
   const { packageMeta } = detailContext;

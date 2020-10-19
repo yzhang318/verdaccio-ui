@@ -11,39 +11,18 @@ import ListItemText from 'verdaccio-ui/components/ListItemText';
 import npmLogo from './img/npm.svg';
 import pnpmLogo from './img/pnpm.svg';
 import yarnLogo from './img/yarn.svg';
-
-const InstallItem = styled(ListItem)({
-  padding: 0,
-  ':hover': {
-    backgroundColor: 'transparent',
-  },
-});
-
-const InstallListItemText = styled(ListItemText)({
-  padding: '0 10px',
-  margin: 0,
-});
-
-const PackageMangerAvatar = styled(Avatar)({
-  borderRadius: '0px',
-  padding: '0',
-  img: {
-    backgroundColor: 'transparent',
-  },
-});
-
 export enum DependencyManager {
   NPM = 'npm',
   YARN = 'yarn',
   PNPM = 'pnpm',
 }
 
-interface Interface {
+interface Props {
   packageName: string;
   dependencyManager: DependencyManager;
 }
 
-const InstallListItem: React.FC<Interface> = ({ packageName, dependencyManager }) => {
+const InstallListItem = ({ packageName, dependencyManager }: Props) => {
   const { t } = useTranslation();
 
   switch (dependencyManager) {
@@ -83,3 +62,23 @@ const InstallListItem: React.FC<Interface> = ({ packageName, dependencyManager }
 };
 
 export default InstallListItem;
+
+const InstallItem = styled(ListItem)({
+  padding: 0,
+  ':hover': {
+    backgroundColor: 'transparent',
+  },
+});
+
+const InstallListItemText = styled(ListItemText)({
+  padding: '0 10px',
+  margin: 0,
+});
+
+const PackageMangerAvatar = styled(Avatar)({
+  borderRadius: '0px',
+  padding: '0',
+  img: {
+    backgroundColor: 'transparent',
+  },
+});

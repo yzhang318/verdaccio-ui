@@ -9,7 +9,7 @@ const StyledInputAdornment = styled(InputAdornment)<{ theme?: Theme }>(props => 
   color: props.theme && props.theme.palette.white,
 }));
 
-const SearchAdornment: React.FC = () => (
+const SearchAdornment = () => (
   <StyledInputAdornment position={'start'}>
     <Search />
   </StyledInputAdornment>

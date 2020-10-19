@@ -5,7 +5,7 @@ import 'typeface-roboto/index.css';
 
 import ResetCSS from './ResetStyles';
 
-const StyleBaseline: React.FC = () => (
+const StyleBaseline = () => (
   <>
     <CssBaseline />
     <ResetCSS />

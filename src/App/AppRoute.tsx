@@ -23,7 +23,7 @@ export const history = createBrowserHistory({
   basename: window.__VERDACCIO_BASENAME_UI_OPTIONS && window.__VERDACCIO_BASENAME_UI_OPTIONS.url_prefix,
 });
 
-const AppRoute: React.FC = () => {
+const AppRoute = () => {
   const appContext = useContext(AppContext);
   const { t } = useTranslation();
 
@@ -33,7 +33,7 @@ const AppRoute: React.FC = () => {
 
   const { user } = appContext;
 
-  const isUserLoggedIn = user && user.username;
+  const isUserLoggedIn = user?.username;
 
   return (
     <Router history={history}>

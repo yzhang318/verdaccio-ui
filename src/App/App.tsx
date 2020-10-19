@@ -19,22 +19,9 @@ import Header from './Header';
 
 import '../../i18n/config';
 
-const StyledBox = styled(Box)<{ theme?: Theme }>(({ theme }) => ({
-  backgroundColor: theme?.palette.background.default,
-}));
-
-const StyledBoxContent = styled(Box)<{ theme?: Theme }>(({ theme }) => ({
-  [`@media screen and (min-width: ${theme && theme.breakPoints.container}px)`]: {
-    maxWidth: theme && theme.breakPoints.container,
-    width: '100%',
-    marginLeft: 'auto',
-    marginRight: 'auto',
-  },
-}));
-
 /* eslint-disable react/jsx-no-bind */
 /* eslint-disable react-hooks/exhaustive-deps */
-const App: React.FC = () => {
+const App = () => {
   const [user, setUser] = useState<undefined | { username: string }>();
   /**
    * Logout user
@@ -85,3 +72,16 @@ const App: React.FC = () => {
 };
 
 export default App;
+
+const StyledBox = styled(Box)<{ theme?: Theme }>(({ theme }) => ({
+  backgroundColor: theme?.palette.background.default,
+}));
+
+const StyledBoxContent = styled(Box)<{ theme?: Theme }>(({ theme }) => ({
+  [`@media screen and (min-width: ${theme?.breakPoints.container}px)`]: {
+    maxWidth: theme?.breakPoints.container,
+    width: '100%',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+  },
+}));

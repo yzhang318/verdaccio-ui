@@ -8,7 +8,7 @@ import DetailContainerContent from './DetailContainerContent';
 import DetailContainerTabs from './DetailContainerTabs';
 import { TabPosition } from './tabs';
 
-const DetailContainer: React.FC = () => {
+const DetailContainer = () => {
   const tabs = Object.values(TabPosition);
   const [tabPosition, setTabPosition] = useState(0);
   const detailContext = useContext(DetailContext);

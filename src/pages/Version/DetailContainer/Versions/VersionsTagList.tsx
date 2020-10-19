@@ -11,7 +11,7 @@ interface Props {
   tags: DistTags;
 }
 
-const VersionsTagList: React.FC<Props> = ({ tags }) => (
+const VersionsTagList = ({ tags }: Props) => (
   <List dense={true}>
     {Object.keys(tags)
       .reverse()

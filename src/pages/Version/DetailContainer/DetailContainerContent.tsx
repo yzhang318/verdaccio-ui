@@ -11,7 +11,7 @@ interface Props {
   readDescription?: string;
 }
 
-const DetailContainerContent: React.FC<Props> = ({ tabPosition, readDescription }) => {
+const DetailContainerContent = ({ tabPosition, readDescription }: Props) => {
   switch (tabPosition) {
     case TabPosition.README:
       return <DetailContainerContentReadme description={readDescription} />;

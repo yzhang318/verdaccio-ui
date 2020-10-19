@@ -8,7 +8,7 @@ import { StyledText } from './styles';
 import VersionsHistoryList from './VersionsHistoryList';
 import VersionsTagList from './VersionsTagList';
 
-const Versions: React.FC = () => {
+const Versions = () => {
   const detailContext = useContext(DetailContext);
   const { t } = useTranslation();
 

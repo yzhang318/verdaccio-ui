@@ -8,9 +8,17 @@ import { getCLISetRegistry, getCLIChangePassword, getCLISetConfigRegistry } from
 import { NODE_MANAGER } from 'verdaccio-ui/utils/constants';
 
 import { CommandContainer } from './styles';
-import { Props, State } from './types';
 
-const RegistryInfoContent: React.FC<Props> = props => {
+export interface Props {
+  scope: string;
+  registryUrl: string;
+}
+
+export interface State {
+  tabPosition: number;
+}
+
+const RegistryInfoContent = (props: Props) => {
   const [tabPosition, setTabPosition] = useState<State['tabPosition']>(0);
   const handleChange = (event: React.ChangeEvent<{}>, tabPosition: number): void => {
     event.preventDefault();
@@ -65,7 +73,7 @@ const RegistryInfoContent: React.FC<Props> = props => {
   };
 
   /* eslint react/prop-types:0 */
-  const TabContainer: React.FC = ({ children }): JSX.Element => {
+  const TabContainer = ({ children }: { children: React.ReactNode }): JSX.Element => {
     return (
       <CommandContainer>
         <Typography>{children}</Typography>

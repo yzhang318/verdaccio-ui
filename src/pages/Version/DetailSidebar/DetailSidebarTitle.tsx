@@ -8,12 +8,12 @@ import { Theme } from 'verdaccio-ui/design-tokens/theme';
 
 interface Props {
   packageName: string;
-  description?: string;
   version: string;
   isLatest: boolean;
+  description?: string;
 }
 
-const DetailSidebarTitle: React.FC<Props> = ({ description, packageName, version, isLatest }) => {
+const DetailSidebarTitle = ({ description, packageName, version, isLatest }: Props) => {
   const { t } = useTranslation();
   return (
     <Box className={'detail-info'} display="flex" flexDirection="column" marginBottom="8px">
@@ -34,5 +34,5 @@ const StyledHeading = styled(Heading)({
 });
 
 const StyledBoxVersion = styled(Box)<{ theme?: Theme }>(({ theme }) => ({
-  color: theme && theme.palette.text.secondary,
+  color: theme?.palette.text.secondary,
 }));

@@ -56,7 +56,7 @@ function hasKeys(object?: { [key: string]: any }): boolean {
   return !!object && Object.keys(object).length > 0;
 }
 
-const Dependencies: React.FC<{}> = () => {
+const Dependencies = () => {
   const { packageMeta } = useContext(DetailContext);
   const { t } = useTranslation();
 

@@ -10,7 +10,7 @@ const resetStyles = makeStyles(({ theme }: { theme?: Theme }) => ({
       fontFamily: '"Roboto", Helvetica Neue, Arial, sans-serif',
     },
     strong: {
-      fontWeight: theme && theme.fontWeight.semiBold,
+      fontWeight: theme?.fontWeight.semiBold,
     },
     'html, body, #root': {
       height: '100%',
@@ -25,8 +25,8 @@ const resetStyles = makeStyles(({ theme }: { theme?: Theme }) => ({
       flex: 1,
       height: '100%',
 
-      [`@media screen and (min-width: ${theme && theme.breakPoints.container}px)`]: {
-        maxWidth: theme && theme.breakPoints.container,
+      [`@media screen and (min-width: ${theme?.breakPoints.container}px)`]: {
+        maxWidth: theme?.breakPoints.container,
         width: '100%',
         marginLeft: 'auto',
         marginRight: 'auto',
@@ -35,7 +35,11 @@ const resetStyles = makeStyles(({ theme }: { theme?: Theme }) => ({
   },
 }));
 
-const ResetStyles: React.FC = ({ children }) => {
+interface Props {
+  children: React.ReactNode;
+}
+
+const ResetStyles = ({ children }: Props) => {
   resetStyles();
   return <>{children}</>;
 };

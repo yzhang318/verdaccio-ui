@@ -11,7 +11,7 @@ interface Props {
   type: DeveloperType;
 }
 
-const DevelopersTitle: React.FC<Props> = ({ type }) => {
+const DevelopersTitle = ({ type }: Props) => {
   const { t } = useTranslation();
   switch (type) {
     case DeveloperType.CONTRIBUTORS:
@@ -25,6 +25,6 @@ const DevelopersTitle: React.FC<Props> = ({ type }) => {
 export default DevelopersTitle;
 
 const StyledText = styled(Text)<{ theme?: Theme }>(({ theme }) => ({
-  fontWeight: theme && theme.fontWeight.bold,
+  fontWeight: theme?.fontWeight.bold,
   marginBottom: '10px',
 }));

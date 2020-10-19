@@ -6,7 +6,8 @@ import { DetailContext } from '../../context';
 import { DetailContextProps } from '../../version-config';
 
 import data from './__partials__/data.json';
-import Install from './Install';
+
+import Install from '.';
 
 const detailContextValue: Partial<DetailContextProps> = {
   packageName: 'foo',

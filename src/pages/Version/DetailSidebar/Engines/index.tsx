@@ -1,18 +1,21 @@
+import styled from '@emotion/styled';
 import React, { useContext } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import Avatar from 'verdaccio-ui/components/Avatar';
 import Grid from 'verdaccio-ui/components/Grid';
 import List from 'verdaccio-ui/components/List';
+import ListItem from 'verdaccio-ui/components/ListItem';
 import ListItemText from 'verdaccio-ui/components/ListItemText';
+import Text from 'verdaccio-ui/components/Text';
+import { Theme } from 'verdaccio-ui/design-tokens/theme';
 
 import { DetailContext } from '../../context';
 import npm from '../Install/img/npm.svg';
 
 import node from './img/node.png';
-import { StyledText, EngineListItem } from './styles';
 
-const Engine: React.FC = () => {
+const Engine = () => {
   const { packageMeta } = useContext(DetailContext);
   const { t } = useTranslation();
 
@@ -50,3 +53,12 @@ const Engine: React.FC = () => {
 };
 
 export default Engine;
+
+const StyledText = styled(Text)<{ theme?: Theme }>(props => ({
+  fontWeight: props.theme && props.theme.fontWeight.bold,
+  textTransform: 'capitalize',
+}));
+
+const EngineListItem = styled(ListItem)({
+  paddingLeft: 0,
+});

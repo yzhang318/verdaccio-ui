@@ -6,7 +6,8 @@ import { DetailContext } from '../../context';
 import { DetailContextProps } from '../../version-config';
 
 import data from './__partials__/data.json';
-import Repository from './Repository';
+
+import Repository from '.';
 
 const detailContextValue: DetailContextProps = {
   packageName: 'foo',
@@ -17,7 +18,11 @@ const detailContextValue: DetailContextProps = {
   packageMeta: data,
 };
 
-const ComponentToBeRendered: React.FC<{ contextValue: DetailContextProps }> = ({ contextValue }) => (
+interface Props {
+  contextValue: DetailContextProps;
+}
+
+const ComponentToBeRendered = ({ contextValue }: Props) => (
   <DetailContext.Provider value={contextValue}>
     <Repository />
   </DetailContext.Provider>

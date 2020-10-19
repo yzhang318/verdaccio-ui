@@ -25,15 +25,9 @@ interface Props {
   visibleMax?: number;
 }
 
-const StyledBox = styled(Box)({
-  '> *': {
-    margin: 5,
-  },
-});
-
 export const VISIBLE_MAX = 6;
 
-const Developers: React.FC<Props> = ({ type, visibleMax = VISIBLE_MAX }) => {
+const Developers = ({ type, visibleMax = VISIBLE_MAX }: Props) => {
   const detailContext = useContext(DetailContext);
   const { t } = useTranslation();
 
@@ -80,3 +74,9 @@ const Developers: React.FC<Props> = ({ type, visibleMax = VISIBLE_MAX }) => {
 };
 
 export default Developers;
+
+const StyledBox = styled(Box)({
+  '> *': {
+    margin: 5,
+  },
+});
