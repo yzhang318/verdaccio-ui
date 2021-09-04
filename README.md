@@ -1,3 +1,11 @@
+# IMPORTANT!
+
+This repo is forked from [**@verdaccio/ui**](https://github.com/verdaccio/ui) and used as private storage to provide the following fixes:
+
+* Adapt i18n to only contain `en-US` and `zh-CN`.
+
+The above feature(s) is required by my organization and it is not considered necessary to make an official Pull Request.
+
 ⚠️⚠️ **THIS REPOSITORY IS ON STALE, ALL NEW FEATURES SHOULD BE REDIRECTED TO [https://github.com/verdaccio/verdaccio/tree/master/packages/plugins/ui-theme](https://github.com/verdaccio/verdaccio/tree/master/packages/plugins/ui-theme)** OR IF YOU WANT THE FEATURE AVAILABLE FOR 5.X SHOULD OPEN A PR IN BOTH REPOSITORIES. ⚠️⚠️
 
 
@@ -31,7 +39,7 @@ We use `>=yarn`, keep in mind that we use lockfiles and use at least Node `v14` 
 Install dependencies
 
 ```
-yarn 
+yarn
 ```
 
 For development run the following command, it will execute `webpack` and `verdaccio` to

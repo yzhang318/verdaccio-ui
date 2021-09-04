@@ -1,7 +1,7 @@
 {
     "copy-to-clipboard": "复制到粘贴板",
     "author-anonymous": "匿名",
-    "author-unknown": "未知",     
+    "author-unknown": "未知",
     "action-bar-action": {
         "visit-home-page": "访问主页",
         "open-an-issue": "提交问题",
@@ -142,27 +142,9 @@
     },
     "lng": {
         "english": "英语",
-        "czech": "捷克語",
-        "japanese": "日语",
-        "portuguese": "葡萄牙语",
-        "spanish": "西班牙语",
-        "german": "德语",
-        "chinese": "中文",
-        "chineseTraditional": "正体中文",
-        "french": "法语",
-        "russian": "俄语",
-        "turkish": "土耳其",
-        "ukraine": "乌克兰",
-        "khmer": "高棉语"
+        "chinese": "中文"
     },
     "flag": {
-        "austria": "奥地利",
-        "brazil": "巴西",
-        "spain": "西班牙",
-        "nicaragua": "尼加拉瓜",
-        "india": "印度",
-        "china": "中国",
-        "germany": "德国",
-        "taiwan": "台湾"
+        "china": "中国"
        }
 }

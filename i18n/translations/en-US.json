@@ -142,27 +142,9 @@
     },
     "lng": {
         "english": "English",
-        "czech": "Czech",
-        "japanese": "Japanese",
-        "portuguese": "Portuguese",
-        "spanish": "Spanish",
-        "german": "German",
-        "chinese": "Chinese",
-        "chineseTraditional": "Chinese (Traditional)",
-        "french":  "French",
-        "russian": "Russian",
-        "turkish": "Turkish",
-        "ukraine": "Ukraine",
-        "khmer": "Khmer"
+        "chinese": "Chinese"
     },
     "flag": {
-        "austria": "Austria",
-        "brazil": "Brazil",
-        "spain": "Spain",
-        "nicaragua": "Nicaragua",
-        "india": "India",
-        "china": "China",
-        "germany": "Germany",
-        "taiwan": "Taiwan"
+        "china": "China"
     }
 }
